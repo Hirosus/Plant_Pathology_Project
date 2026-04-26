@@ -2,21 +2,20 @@ name: Keep Streamlit App Awake
 
 on:
   schedule:
-    # This runs at 00:00 UTC every day
     - cron: '0 0 * * *'
-  workflow_dispatch: # This allows you to run it manually for testing
+  workflow_dispatch: 
 
 jobs:
   ping:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: actions/checkout@v4
+        uses: actions/setup-python@v4
         with:
-          python-version: '3.11'
+          python-version: '3.9'
 
       - name: Install dependencies
         run: pip install requests
