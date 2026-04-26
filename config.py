@@ -13,7 +13,7 @@ import os
 DATA_ROOT       = "/content/drive/MyDrive/PlantDiseaseDataset"
 TRAIN_DIR       = os.path.join(DATA_ROOT, "train")
 VALID_DIR       = os.path.join(DATA_ROOT, "valid")
-CHECKPOINT_DIR  = r"C:\Users\USER\Downloads\PlantCheckpoints"
+CHECKPOINT_DIR  = os.path.join(os.path.dirname(__file__), "checkpoints")
 
 os.makedirs(CHECKPOINT_DIR, exist_ok=True)
 
