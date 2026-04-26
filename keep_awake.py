@@ -11,7 +11,7 @@ def ping_app():
         response = requests.get(APP_URL, timeout=30)
         
         # Check if the request was successful
-        if response.status_status == 200:
+        if response.status_code == 200:
             print(f"[{datetime.now()}] Success: App is awake.")
         else:
             print(f"[{datetime.now()}] Warning: Received status code {response.status_code}")
