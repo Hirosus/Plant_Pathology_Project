@@ -286,7 +286,9 @@ html, body, [class*="css"] {
     color: #F0FDF4 !important;
 }
 
-#MainMenu, footer, header { visibility: hidden; }
+#MainMenu, footer { visibility: hidden; }
+[data-testid="stHeader"] { background: transparent !important; }
+[data-testid="stToolbar"] { visibility: hidden !important; }
 .block-container { padding-top: 1.5rem !important; padding-bottom: 3rem !important; }
 
 section[data-testid="stSidebar"] {
