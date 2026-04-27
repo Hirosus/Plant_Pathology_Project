@@ -288,7 +288,21 @@ html, body, [class*="css"] {
 
 #MainMenu, footer { visibility: hidden; }
 [data-testid="stHeader"] { background: transparent !important; }
-[data-testid="stToolbar"] { visibility: hidden !important; }
+[data-testid="stHeader"] [data-testid="stToolbar"] { display: none !important; }
+[data-testid="stSidebarCollapsedControl"], [data-testid="collapsedControl"] {
+    display: flex !important;
+    visibility: visible !important;
+    z-index: 999999 !important;
+    color: #22C55E !important;
+    background-color: #0A0F0D !important;
+    border: 1px solid #1E3028 !important;
+    border-radius: 8px !important;
+    padding: 0.2rem !important;
+}
+[data-testid="stSidebarCollapsedControl"] svg, [data-testid="collapsedControl"] svg {
+    fill: #22C55E !important;
+    color: #22C55E !important;
+}
 .block-container { padding-top: 1.5rem !important; padding-bottom: 3rem !important; }
 
 section[data-testid="stSidebar"] {
