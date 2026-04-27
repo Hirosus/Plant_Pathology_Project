@@ -6,19 +6,9 @@ on:
   workflow_dispatch: 
 
 jobs:
-  ping:
+  ping_job:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.9'
-
-      - name: Install dependencies
-        run: pip install requests
-
-      - name: Run ping script
-        run: python keep_awake.py
+      - name: Ping the app
+        # Replace the URL below with your actual Streamlit URL
+        run: curl -I https://plantpathologydiagnosis.streamlit.app
